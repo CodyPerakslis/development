@@ -7,3 +7,7 @@ latest:
 		--build-arg protoc_gen_version=v1.4.2 \
 		--build-arg make_version=4.3-r0 \
 		.
+	docker tag dev-go:$(LATEST) codyperakslis/dev-go:$(LATEST)
+	docker push codyperakslis/dev-go:$(LATEST)
+	docker tag dev-go:latest codyperakslis/dev-go:latest
+	docker push codyperakslis/dev-go:latest
